@@ -22,6 +22,10 @@ namespace StudyBuddy.Forms.Questions
 			this.questionLabel.Text = this.question.question;
 			this.Visible = true;
 
+            FormClosing += delegate(object o, FormClosingEventArgs e)
+            {
+                StuddyBuddyForm.ballot = null;
+            };
 		}
 
 		private void FillInQuestionForm_Load(object sender, EventArgs e)
@@ -37,11 +41,17 @@ namespace StudyBuddy.Forms.Questions
 			if (answer.ToLower().Equals(this.question.answer))
 			{
 				MessageBox.Show("Correct!");
+                StuddyBuddyForm.currentQuestion.interval *= 2;
+                StuddyBuddyForm.ballot = null;
 			}
 			else
 			{
-				MessageBox.Show("WRONG");
+                MessageBox.Show("Incorrect.");
+                StuddyBuddyForm.currentQuestion.interval /= 2;
+                StuddyBuddyForm.ballot = null;
 			}
+
+            StuddyBuddyForm.waiting = false;
 
 		}
 	}

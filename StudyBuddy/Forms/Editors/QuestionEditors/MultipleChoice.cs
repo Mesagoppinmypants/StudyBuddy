@@ -118,6 +118,7 @@ namespace StudyBuddy.Forms.Editors.QuestionEditors
 			{
 				// Create new question
 				question = new Question();
+                question.interval = 5;
 
 				// Update choices
 				question.choices = new string[(int)numericUpDown1.Value];
@@ -147,5 +148,10 @@ namespace StudyBuddy.Forms.Editors.QuestionEditors
 				this.Close();
 			}
 		}
+
+        private void MultipleChoice_Load(object sender, EventArgs e)
+        {
+
+        }
 	}
 }

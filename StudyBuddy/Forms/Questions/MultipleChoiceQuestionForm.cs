@@ -35,11 +35,17 @@ namespace StudyBuddy.Forms.Questions
 				this.radioButton4.Text = question.choices[3];
 			else
 				this.radioButton4.Visible = false;
+
+            FormClosing += delegate(object o, FormClosingEventArgs e)
+            {
+                StuddyBuddyForm.ballot = null;
+                StuddyBuddyForm.waiting = false;
+            };
 		}
 
 		private void MultipleChoiceQuestionForm_Load(object sender, EventArgs e)
 		{
-
+            
 		}
 
 		private void okayButton_Click(object sender, EventArgs e)
@@ -57,11 +63,17 @@ namespace StudyBuddy.Forms.Questions
 				if (answer.ToLower().Equals(this.question.answer))
 				{
 					MessageBox.Show("Correct!");
+                    question.interval *= 2;
+                    StuddyBuddyForm.ballot = null;
 				}
 				else
 				{
 					MessageBox.Show("WRONG");
+                    question.interval /= 2;
+                    StuddyBuddyForm.ballot = null;
 				}
+
+                StuddyBuddyForm.waiting = false;
 			}
 
 		}

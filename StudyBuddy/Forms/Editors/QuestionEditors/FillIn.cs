@@ -42,6 +42,7 @@ namespace StudyBuddy.Forms.Editors.QuestionEditors
 			else
 			{
 				question = new Question();
+                question.interval = 5;
 				question.question = textBox1.Text;
 				question.answer = textBox2.Text;
 				set.questions.Add(question);

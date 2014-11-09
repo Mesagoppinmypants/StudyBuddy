@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
+using System.Threading;
 
 namespace StudyBuddy
 {
@@ -20,9 +21,16 @@ namespace StudyBuddy
 		static public List<QuestionSet> sets = new List<QuestionSet>();
 		static SetEditor setEditor = null;
 		static Community community = null;
+        static public Form ballot = null;
 		public static StuddyBuddyForm instance;
 
 		public static Question currentQuestion = null;
+
+        static Thread threat;
+
+        static Random random = new Random();
+
+        public static bool waiting = false;
 
 		public StuddyBuddyForm()
 		{
@@ -36,18 +44,47 @@ namespace StudyBuddy
 
             this.FormClosing += delegate(object o, FormClosingEventArgs e)
             {
+                threat.Abort();
                 string json = JsonConvert.SerializeObject(sets);
                 File.WriteAllText("data.json", json);
             };
+
+            threat = new Thread(delegate ()
+            {
+                while (true)
+                {
+
+                    IEnumerable<QuestionSet> activeSets = sets.Where(a => a.active && a.questions.Count() > 0);
+                    if (activeSets.Count() == 0)
+                    {
+                        Thread.Sleep(5000);
+                        continue;
+                    }
+                    int r = random.Next(activeSets.Count());
+                    QuestionSet set = activeSets.ElementAt(r);
+                    currentQuestion = set.questions[random.Next(set.questions.Count())];
+
+                    if (currentQuestion.interval == 0) currentQuestion.interval = 5;
+
+                    Thread.Sleep(currentQuestion.interval * 2500);
+
+                    int i = 0;
+                    while (waiting && i < 10 || ballot != null)
+                    {
+                        Thread.Sleep(1000);
+                        i++;
+                    }
+                    trayIcon.ShowBalloonTip(10000, "Study Buddy", currentQuestion.question, ToolTipIcon.None);
+                }
+            });
+
+            threat.Start();
 		}
 
 		private void StuddyBuddyForm_Load(object sender, EventArgs e)
 		{
 			populateForm();
 
-            //currentQuestion = new Question(1, "What is the meaning of life?", "42");
-            //currentQuestion.choices = new String[] {"47", "38", "36", "42"};
-            //trayIcon.ShowBalloonTip(10000, "StudyBuddy", currentQuestion.question, ToolTipIcon.None);
 		}
 
 		private void StuddyBuddyForm_Resize(object sender, EventArgs e)
@@ -67,11 +104,11 @@ namespace StudyBuddy
 		{
 			if (currentQuestion.choices == null)
 			{
-				new FillInQuestionForm(currentQuestion);
+				ballot = new FillInQuestionForm(currentQuestion);
 			}
 			else
 			{
-				new MultipleChoiceQuestionForm(currentQuestion);
+				ballot = new MultipleChoiceQuestionForm(currentQuestion);
 			}
 		}
 
