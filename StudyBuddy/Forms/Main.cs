@@ -45,9 +45,9 @@ namespace StudyBuddy
 		{
 			populateForm();
 
-			currentQuestion = new Question(1, "What is the meaning of life?", "42");
-			currentQuestion.choices = new String[] {"47", "38", "36", "42"};
-			trayIcon.ShowBalloonTip(10000, "StudyBuddy", currentQuestion.question, ToolTipIcon.None);
+            //currentQuestion = new Question(1, "What is the meaning of life?", "42");
+            //currentQuestion.choices = new String[] {"47", "38", "36", "42"};
+            //trayIcon.ShowBalloonTip(10000, "StudyBuddy", currentQuestion.question, ToolTipIcon.None);
 		}
 
 		private void StuddyBuddyForm_Resize(object sender, EventArgs e)
@@ -144,6 +144,16 @@ namespace StudyBuddy
 
 				// Add panel to scrollable panel
 				setPanel.Controls.Add(panel);
+
+
+                ContextMenu contextMenu = new ContextMenu();
+                contextMenu.MenuItems.Add("Delete", delegate(object o, EventArgs e)
+                {
+                    sets.Remove(set);
+                    populateForm();
+                });
+
+                panel.ContextMenu = contextMenu;
 			}
 		}
 
