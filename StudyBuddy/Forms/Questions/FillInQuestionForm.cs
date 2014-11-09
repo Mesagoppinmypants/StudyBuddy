@@ -43,12 +43,14 @@ namespace StudyBuddy.Forms.Questions
 				MessageBox.Show("Correct!");
                 StuddyBuddyForm.currentQuestion.interval *= 2;
                 StuddyBuddyForm.ballot = null;
+				StuddyBuddyForm.stats.IncreaseCorrect();
 			}
 			else
 			{
-                MessageBox.Show("Incorrect.");
+				MessageBox.Show("Incorrect.\nThe correct answer is " + question.answer + ".");
                 StuddyBuddyForm.currentQuestion.interval /= 2;
                 StuddyBuddyForm.ballot = null;
+				StuddyBuddyForm.stats.IncreaseIncorrect();
 			}
 
             StuddyBuddyForm.waiting = false;

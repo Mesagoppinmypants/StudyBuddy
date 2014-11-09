@@ -28,16 +28,20 @@ namespace StudyBuddy
 
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-			if(textBox1.Text.Length > 0)
+			try
 			{
-				WebClient wc = new WebClient();
-				List<QuestionSet> sets = JsonConvert.DeserializeObject<List<QuestionSet>>(wc.DownloadString(string.Format(filter_search,textBox1.Text)));
-				populateForm(sets);		
-				foreach (QuestionSet qc in sets)
+				if (textBox1.Text.Length > -1)
 				{
-					qc.active = false;
+					WebClient wc = new WebClient();
+					List<QuestionSet> sets = JsonConvert.DeserializeObject<List<QuestionSet>>(wc.DownloadString(string.Format(filter_search, textBox1.Text)));
+					populateForm(sets);
+					foreach (QuestionSet qc in sets)
+					{
+						qc.active = false;
+					}
 				}
 			}
+			catch (Exception ex) { MessageBox.Show("Error connecting to community."); }
 		}
 
 		private void populateForm(List<QuestionSet> sets)
@@ -57,7 +61,8 @@ namespace StudyBuddy
 				PictureBox icon = new PictureBox();
 				icon.Location = new Point(3, 3);
 				icon.Size = new Size(74, 74);
-				icon.Image = Image.FromFile("icons/" + set.icon + ".png");
+				icon.BackgroundImage = Image.FromFile("icons/" + set.icon + ".png");
+				icon.BackgroundImageLayout = ImageLayout.Stretch;
 
 				// Name
 				Label name = new Label();

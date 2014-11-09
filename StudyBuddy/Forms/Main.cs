@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Threading;
 using StudyBuddy.Forms.Editors;
+using StudyBuddy.Forms;
 
 namespace StudyBuddy
 {
@@ -25,6 +26,7 @@ namespace StudyBuddy
 		static Community community = null;
         static public Form ballot = null;
 		public static StuddyBuddyForm instance;
+		public static Statistics stats;
 
 		public static Question currentQuestion = null;
 
@@ -51,6 +53,8 @@ namespace StudyBuddy
                 File.WriteAllText("data.json", json);
             };
 
+			stats = new Statistics(); 
+
             threat = new Thread(delegate ()
             {
                 while (true)
@@ -68,16 +72,15 @@ namespace StudyBuddy
 
                     if (q.interval == 0) q.interval = 5;
 
-                    Thread.Sleep(q.interval * 2500);
-
                     int i = 0;
                     while (waiting && i < 10 || ballot != null)
                     {
                         Thread.Sleep(1000);
                         i++;
                     }
+					Thread.Sleep(q.interval * 2500);
 					currentQuestion = q;
-                    trayIcon.ShowBalloonTip(10000, "Study Buddy", currentQuestion.question, ToolTipIcon.None);
+                    trayIcon.ShowBalloonTip(10000, "StudyBuddy", currentQuestion.question, ToolTipIcon.None);
                 }
             });
 
@@ -139,7 +142,8 @@ namespace StudyBuddy
 				PictureBox icon = new PictureBox();
 				icon.Location = new Point(3, 3);
 				icon.Size = new Size(74, 74);
-				icon.Image = Image.FromFile("icons/" + set.icon + ".png");
+				icon.BackgroundImage = Image.FromFile("icons/" + set.icon + ".png");
+				icon.BackgroundImageLayout = ImageLayout.Stretch;
 
 				// Name
 				Label name = new Label();
@@ -223,6 +227,11 @@ namespace StudyBuddy
 
 			setCreator = new SetCreator();
 			setCreator.Show();
+		}
+
+		private void toolStripButton2_Click(object sender, EventArgs e)
+		{
+			stats.Show();
 		}
 	}
 }

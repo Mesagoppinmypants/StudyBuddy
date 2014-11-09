@@ -35,6 +35,7 @@
 			// 
 			// answerBox
 			// 
+			this.answerBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.answerBox.Location = new System.Drawing.Point(10, 101);
 			this.answerBox.Multiline = true;
 			this.answerBox.Name = "answerBox";
@@ -47,17 +48,19 @@
 			this.okayButton.Name = "okayButton";
 			this.okayButton.Size = new System.Drawing.Size(75, 23);
 			this.okayButton.TabIndex = 5;
-			this.okayButton.Text = "Okay";
+			this.okayButton.Text = "Submit";
 			this.okayButton.UseVisualStyleBackColor = true;
 			this.okayButton.Click += new System.EventHandler(this.okayButton_Click);
 			// 
 			// questionLabel
 			// 
+			this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.questionLabel.Location = new System.Drawing.Point(10, 13);
 			this.questionLabel.Name = "questionLabel";
 			this.questionLabel.Size = new System.Drawing.Size(313, 85);
 			this.questionLabel.TabIndex = 6;
 			this.questionLabel.Text = "label1";
+			this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// FillInQuestionForm
 			// 
@@ -67,8 +70,9 @@
 			this.Controls.Add(this.questionLabel);
 			this.Controls.Add(this.okayButton);
 			this.Controls.Add(this.answerBox);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "FillInQuestionForm";
-			this.Text = "FillInQuestionForm";
+			this.Text = "Question";
 			this.Load += new System.EventHandler(this.FillInQuestionForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

@@ -65,12 +65,14 @@ namespace StudyBuddy.Forms.Questions
 					MessageBox.Show("Correct!");
                     question.interval *= 2;
                     StuddyBuddyForm.ballot = null;
+					StuddyBuddyForm.stats.IncreaseCorrect();
 				}
 				else
 				{
-					MessageBox.Show("WRONG");
+					MessageBox.Show("Incorrect.\nThe correct answer is " + question.answer + ".");
                     question.interval /= 2;
                     StuddyBuddyForm.ballot = null;
+					StuddyBuddyForm.stats.IncreaseIncorrect();
 				}
 
                 StuddyBuddyForm.waiting = false;

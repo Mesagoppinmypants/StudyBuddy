@@ -41,10 +41,10 @@
 			// listView1
 			// 
 			this.listView1.ForeColor = System.Drawing.SystemColors.Window;
-			this.listView1.Location = new System.Drawing.Point(308, 12);
+			this.listView1.Location = new System.Drawing.Point(308, 78);
 			this.listView1.MultiSelect = false;
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(267, 299);
+			this.listView1.Size = new System.Drawing.Size(267, 233);
 			this.listView1.TabIndex = 0;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			// 
@@ -56,9 +56,9 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(461, 320);
+			this.button1.Location = new System.Drawing.Point(208, 320);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.Size = new System.Drawing.Size(168, 23);
 			this.button1.TabIndex = 1;
 			this.button1.Text = "Create";
 			this.button1.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
 			// 
 			this.textBox1.Location = new System.Drawing.Point(12, 28);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(290, 20);
+			this.textBox1.Size = new System.Drawing.Size(563, 20);
 			this.textBox1.TabIndex = 2;
 			// 
 			// textBox2
@@ -109,7 +109,8 @@
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.listView1);
 			this.Name = "SetCreator";
-			this.Text = "SetCreator";
+			this.Text = "Set Creator";
+			this.Load += new System.EventHandler(this.SetCreator_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

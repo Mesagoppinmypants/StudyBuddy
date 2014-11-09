@@ -13,17 +13,17 @@ namespace StudyBuddy.Forms.Editors
 {
 	public partial class SetCreator : Form
 	{
+		private string[] files;
+
 		public SetCreator()
 		{
 			InitializeComponent();
 
-			String[] files = Directory.GetFiles("icons/");
+			files = Directory.GetFiles("icons/");
 
 			foreach (String file in files)
             {
 				imageList1.Images.Add(Image.FromFile(file));
-				Console.WriteLine(file);
-				
 			}
 
 			this.listView1.View = View.LargeIcon;
@@ -34,7 +34,6 @@ namespace StudyBuddy.Forms.Editors
 			{
 				ListViewItem item = new ListViewItem();
 				item.ImageIndex = i;
-				item.Text = files[i];
 				listView1.Items.Add(item);
 			}
 		}
@@ -46,13 +45,18 @@ namespace StudyBuddy.Forms.Editors
 			else
 			{
 				QuestionSet qs = new QuestionSet(textBox1.Text, textBox2.Text);
-				qs.icon = Convert.ToInt32(listView1.SelectedItems[0].Text.Replace("icons/", "").Replace(".png", ""));
+				qs.icon = Convert.ToInt32(files[listView1.SelectedIndices[0]].Replace("icons/", "").Replace(".png", ""));
 
 				StuddyBuddyForm.sets.Add(qs);
 				StuddyBuddyForm.instance.populateForm();
 
 				this.Close();
 			}
+		}
+
+		private void SetCreator_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

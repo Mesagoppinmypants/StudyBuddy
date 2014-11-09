@@ -39,17 +39,18 @@
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.setPanel = new System.Windows.Forms.Panel();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
 			this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-			this.setPanel = new System.Windows.Forms.Panel();
-			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.inactiveContentMenu.SuspendLayout();
 			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// trayIcon
@@ -130,50 +131,17 @@
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Computer Science Exam 1";
 			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(74, 74);
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
 			// toolStrip1
 			// 
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton2});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(777, 25);
 			this.toolStrip1.TabIndex = 8;
 			this.toolStrip1.Text = "toolStrip1";
-			// 
-			// toolStripDropDownButton1
-			// 
-			this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem1});
-			this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-			this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-			this.toolStripDropDownButton1.Size = new System.Drawing.Size(57, 22);
-			this.toolStripDropDownButton1.Text = "Sets";
-			// 
-			// addToolStripMenuItem1
-			// 
-			this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-			this.addToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-			this.addToolStripMenuItem1.Text = "Add";
-			this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
-			// 
-			// toolStripButton1
-			// 
-			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton1.Name = "toolStripButton1";
-			this.toolStripButton1.Size = new System.Drawing.Size(91, 22);
-			this.toolStripButton1.Text = "Community";
-			this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
 			// 
 			// setPanel
 			// 
@@ -189,6 +157,49 @@
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
 			// 
+			// toolStripDropDownButton1
+			// 
+			this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem1});
+			this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+			this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+			this.toolStripDropDownButton1.Size = new System.Drawing.Size(57, 22);
+			this.toolStripDropDownButton1.Text = "Sets";
+			// 
+			// addToolStripMenuItem1
+			// 
+			this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
+			this.addToolStripMenuItem1.Size = new System.Drawing.Size(96, 22);
+			this.addToolStripMenuItem1.Text = "Add";
+			this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
+			// 
+			// toolStripButton1
+			// 
+			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(91, 22);
+			this.toolStripButton1.Text = "Community";
+			this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+			// 
+			// toolStripButton2
+			// 
+			this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton2.Name = "toolStripButton2";
+			this.toolStripButton2.Size = new System.Drawing.Size(73, 22);
+			this.toolStripButton2.Text = "Statistics";
+			this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(74, 74);
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
 			// StuddyBuddyForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,16 +208,17 @@
 			this.Controls.Add(this.setPanel);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.panel1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "StuddyBuddyForm";
-			this.Text = "Study Buddy";
+			this.Text = "StudyBuddy";
 			this.Load += new System.EventHandler(this.StuddyBuddyForm_Load);
 			this.Resize += new System.EventHandler(this.StuddyBuddyForm_Resize);
 			this.inactiveContentMenu.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -230,6 +242,7 @@
 		private System.Windows.Forms.Panel setPanel;
 		private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
 

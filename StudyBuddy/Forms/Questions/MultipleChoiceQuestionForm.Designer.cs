@@ -38,65 +38,67 @@
 			// 
 			// radioButton1
 			// 
-			this.radioButton1.AutoSize = true;
-			this.radioButton1.Location = new System.Drawing.Point(15, 101);
+			this.radioButton1.Location = new System.Drawing.Point(15, 97);
 			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.Size = new System.Drawing.Size(85, 17);
+			this.radioButton1.Size = new System.Drawing.Size(312, 21);
 			this.radioButton1.TabIndex = 3;
 			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "radioButton1";
+			this.radioButton1.Text = "Answer 1";
+			this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.radioButton1.UseVisualStyleBackColor = true;
 			// 
 			// radioButton2
 			// 
-			this.radioButton2.AutoSize = true;
 			this.radioButton2.Location = new System.Drawing.Point(15, 124);
 			this.radioButton2.Name = "radioButton2";
-			this.radioButton2.Size = new System.Drawing.Size(85, 17);
+			this.radioButton2.Size = new System.Drawing.Size(312, 17);
 			this.radioButton2.TabIndex = 4;
 			this.radioButton2.TabStop = true;
-			this.radioButton2.Text = "radioButton2";
+			this.radioButton2.Text = "Answer 2";
+			this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.radioButton2.UseVisualStyleBackColor = true;
 			// 
 			// radioButton3
 			// 
-			this.radioButton3.AutoSize = true;
 			this.radioButton3.Location = new System.Drawing.Point(15, 147);
 			this.radioButton3.Name = "radioButton3";
-			this.radioButton3.Size = new System.Drawing.Size(85, 17);
+			this.radioButton3.Size = new System.Drawing.Size(312, 17);
 			this.radioButton3.TabIndex = 5;
 			this.radioButton3.TabStop = true;
-			this.radioButton3.Text = "radioButton3";
+			this.radioButton3.Text = "Answer 3";
+			this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.radioButton3.UseVisualStyleBackColor = true;
 			// 
 			// radioButton4
 			// 
-			this.radioButton4.AutoSize = true;
 			this.radioButton4.Location = new System.Drawing.Point(15, 170);
 			this.radioButton4.Name = "radioButton4";
-			this.radioButton4.Size = new System.Drawing.Size(85, 17);
+			this.radioButton4.Size = new System.Drawing.Size(310, 17);
 			this.radioButton4.TabIndex = 6;
 			this.radioButton4.TabStop = true;
-			this.radioButton4.Text = "radioButton4";
+			this.radioButton4.Text = "Answer 4";
+			this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.radioButton4.UseVisualStyleBackColor = true;
 			// 
 			// okayButton
 			// 
-			this.okayButton.Location = new System.Drawing.Point(127, 202);
+			this.okayButton.Location = new System.Drawing.Point(135, 199);
 			this.okayButton.Name = "okayButton";
 			this.okayButton.Size = new System.Drawing.Size(75, 23);
 			this.okayButton.TabIndex = 7;
-			this.okayButton.Text = "Okay";
+			this.okayButton.Text = "Submit";
 			this.okayButton.UseVisualStyleBackColor = true;
 			this.okayButton.Click += new System.EventHandler(this.okayButton_Click);
 			// 
 			// questionLabel
 			// 
+			this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.questionLabel.Location = new System.Drawing.Point(12, 9);
 			this.questionLabel.Name = "questionLabel";
-			this.questionLabel.Size = new System.Drawing.Size(313, 85);
+			this.questionLabel.Size = new System.Drawing.Size(315, 85);
 			this.questionLabel.TabIndex = 8;
-			this.questionLabel.Text = "label1";
+			this.questionLabel.Text = "Question";
+			this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// MultipleChoiceQuestionForm
 			// 
@@ -109,11 +111,11 @@
 			this.Controls.Add(this.radioButton3);
 			this.Controls.Add(this.radioButton2);
 			this.Controls.Add(this.radioButton1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "MultipleChoiceQuestionForm";
-			this.Text = "MultipleChoiceQuestionForm";
+			this.Text = "Question";
 			this.Load += new System.EventHandler(this.MultipleChoiceQuestionForm_Load);
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 

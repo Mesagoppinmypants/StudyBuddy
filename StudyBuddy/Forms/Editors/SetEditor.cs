@@ -119,8 +119,13 @@ namespace StudyBuddy
 
 		private void toolStripButton1_Click(object sender, EventArgs e)
 		{
-			WebClient wc = new WebClient();
-			wc.UploadString("http://104.236.25.40:1337/api/SubmitSet?a=a", JsonConvert.SerializeObject(set)); // upload our json of question set
+			try
+			{
+				WebClient wc = new WebClient();
+				wc.UploadString("http://104.236.25.40:1337/api/SubmitSet?a=a", JsonConvert.SerializeObject(set)); // upload our json of question set
+
+			}
+			catch (Exception ex) { MessageBox.Show("Error connecting to community."); }
 		}
 	}
 }
