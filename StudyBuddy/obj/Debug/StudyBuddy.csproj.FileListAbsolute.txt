@@ -55,3 +55,4 @@ C:\Users\Fyre\Documents\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Questio
 C:\Users\Fyre\Documents\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Questions.MultipleChoiceQuestionForm.resources
 C:\Users\Fyre\Documents\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Properties.Resources.resources
 C:\Users\Fyre\Documents\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Editors.SetCreator.resources

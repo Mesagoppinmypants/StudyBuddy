@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
 using System.Threading;
+using StudyBuddy.Forms.Editors;
 
 namespace StudyBuddy
 {
@@ -20,6 +21,7 @@ namespace StudyBuddy
 		static Community pull = new Community();
 		static public List<QuestionSet> sets = new List<QuestionSet>();
 		static SetEditor setEditor = null;
+		static SetCreator setCreator = null;
 		static Community community = null;
         static public Form ballot = null;
 		public static StuddyBuddyForm instance;
@@ -211,6 +213,15 @@ namespace StudyBuddy
 			}
 			community = new Community();
 			community.Show();
+		}
+
+		private void addToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			if(setCreator != null)
+				setCreator.Close();
+
+			setCreator = new SetCreator();
+			setCreator.Show();
 		}
 	}
 }
