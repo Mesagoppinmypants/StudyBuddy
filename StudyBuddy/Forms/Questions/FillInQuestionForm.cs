@@ -38,7 +38,7 @@ namespace StudyBuddy.Forms.Questions
 			string answer = answerBox.Text;
 			this.Close();
 
-			if (answer.ToLower().Equals(this.question.answer))
+			if (answer.ToLower().Equals(this.question.answer.ToLower()))
 			{
 				MessageBox.Show("Correct!");
                 StuddyBuddyForm.currentQuestion.interval *= 2;

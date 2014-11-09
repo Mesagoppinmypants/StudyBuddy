@@ -60,7 +60,7 @@ namespace StudyBuddy.Forms.Questions
 
 				this.Close();
 
-				if (answer.ToLower().Equals(this.question.answer))
+				if (answer.ToLower().Equals(this.question.answer.ToLower()))
 				{
 					MessageBox.Show("Correct!");
                     question.interval *= 2;

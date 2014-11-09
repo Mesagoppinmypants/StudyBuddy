@@ -64,11 +64,11 @@ namespace StudyBuddy
                     }
                     int r = random.Next(activeSets.Count());
                     QuestionSet set = activeSets.ElementAt(r);
-                    currentQuestion = set.questions[random.Next(set.questions.Count())];
+                    Question q = set.questions[random.Next(set.questions.Count())];
 
-                    if (currentQuestion.interval == 0) currentQuestion.interval = 5;
+                    if (q.interval == 0) q.interval = 5;
 
-                    Thread.Sleep(currentQuestion.interval * 2500);
+                    Thread.Sleep(q.interval * 2500);
 
                     int i = 0;
                     while (waiting && i < 10 || ballot != null)
@@ -76,6 +76,7 @@ namespace StudyBuddy
                         Thread.Sleep(1000);
                         i++;
                     }
+					currentQuestion = q;
                     trayIcon.ShowBalloonTip(10000, "Study Buddy", currentQuestion.question, ToolTipIcon.None);
                 }
             });

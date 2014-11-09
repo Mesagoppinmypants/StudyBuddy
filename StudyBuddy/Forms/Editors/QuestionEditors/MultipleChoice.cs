@@ -34,7 +34,7 @@ namespace StudyBuddy.Forms.Editors.QuestionEditors
 
 				for (int i = 0; i < numericUpDown1.Value; i++ )
 				{
-					if (question.choices[i].ToLower().Equals(question.answer))
+					if (question.choices[i].ToLower().Equals(question.answer.ToLower()))
 					{
 						if (i == 0) radioButton1.Checked = true;
 						else if (i == 1) radioButton2.Checked = true;
