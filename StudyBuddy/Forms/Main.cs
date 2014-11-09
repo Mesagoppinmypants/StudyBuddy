@@ -14,16 +14,18 @@ namespace StudyBuddy
 	public partial class StuddyBuddyForm : Form
 	{
 
-		static Pull pull = new Pull();
-		static List<QuestionSet> sets = new List<QuestionSet>();
+		static Community pull = new Community();
+		static public List<QuestionSet> sets = new List<QuestionSet>();
 		static SetEditor setEditor = null;
+		static Community community = null;
+		public static StuddyBuddyForm instance;
 
 		public static Question currentQuestion = null;
 
 		public StuddyBuddyForm()
 		{
 			InitializeComponent();
-
+			instance = this;
    
 		}
 
@@ -73,8 +75,10 @@ namespace StudyBuddy
 			WindowState = FormWindowState.Normal;
 		}
 
-		private void populateForm()
+		public void populateForm()
 		{
+			setPanel.Controls.Clear();
+
 			for (int i = 0; i < sets.Count; i++)
 			{
 				QuestionSet set = sets[i];
@@ -144,6 +148,16 @@ namespace StudyBuddy
 
 		private void trayIcon_MouseClick(object sender, MouseEventArgs e)
 		{
+		}
+
+		private void toolStripButton1_Click(object sender, EventArgs e)
+		{
+			if(community != null)
+			{
+				community.Close();
+			}
+			community = new Community();
+			community.Show();
 		}
 	}
 }

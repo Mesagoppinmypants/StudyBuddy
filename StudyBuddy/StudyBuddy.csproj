@@ -141,6 +141,7 @@
   <ItemGroup>
     <None Include="Resources\arrow_down.png" />
     <None Include="Icons\delete.png" />
+    <None Include="Icons\magnifier.png" />
     <Content Include="Resources\study app.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
