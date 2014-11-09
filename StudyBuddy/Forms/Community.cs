@@ -42,6 +42,7 @@ namespace StudyBuddy
 
 		private void populateForm(List<QuestionSet> sets)
 		{
+			panel1.Controls.Clear();
 			for (int i = 0; i < sets.Count; i++)
 			{
 				QuestionSet set = sets[i];
