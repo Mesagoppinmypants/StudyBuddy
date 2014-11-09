@@ -13,7 +13,7 @@ namespace StudyBuddy
         public string name;
 		public string description;
         public List<Question> questions;
-		public Bitmap icon;
+		public int icon;
 		public bool active;
 
         public QuestionSet(int id, string name, string description, List<Question> questions)
@@ -23,6 +23,7 @@ namespace StudyBuddy
 			this.description = description;
             this.questions = questions;
 			this.active = false;
+			this.icon = 0;
         }
 
         public QuestionSet(string name, string description)

@@ -99,7 +99,7 @@ namespace StudyBuddy
 				PictureBox icon = new PictureBox();
 				icon.Location = new Point(3, 3);
 				icon.Size = new Size(74, 74);
-				//icon.Image = set.icon;
+				icon.Image = Image.FromFile("icons/" + set.icon + ".png");
 
 				// Name
 				Label name = new Label();
