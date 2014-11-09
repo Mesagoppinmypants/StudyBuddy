@@ -61,6 +61,7 @@ namespace StudyBuddy
 				remove.Image = global::StudyBuddy.Properties.Resources.delete;
 				remove.Location = new Point(519, 12);
 				remove.Size = new Size(16, 16);
+                remove.Cursor = System.Windows.Forms.Cursors.Hand;
 
 				// Add delegates
 				remove.MouseClick += delegate(object o, MouseEventArgs e)
