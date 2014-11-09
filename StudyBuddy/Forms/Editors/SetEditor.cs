@@ -1,10 +1,12 @@
-﻿using StudyBuddy.Forms.Editors.QuestionEditors;
+﻿using Newtonsoft.Json;
+using StudyBuddy.Forms.Editors.QuestionEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -112,6 +114,12 @@ namespace StudyBuddy
 			if (editor != null) editor.Close();
 			editor = new MultipleChoice(null, this);
 			editor.Show();
+		}
+
+		private void toolStripButton1_Click(object sender, EventArgs e)
+		{
+			WebClient wc = new WebClient();
+			wc.UploadString("http://104.236.25.40:1337/api/SubmitSet?a=a", JsonConvert.SerializeObject(set)); // upload our json of question set
 		}
 	}
 }
