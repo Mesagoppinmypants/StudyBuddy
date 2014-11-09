@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace StudyBuddy
 {
@@ -26,17 +28,21 @@ namespace StudyBuddy
 		{
 			InitializeComponent();
 			instance = this;
-   
+
+            if (File.Exists("data.json"))
+            {
+                sets = JsonConvert.DeserializeObject<List<QuestionSet>>(File.ReadAllText("data.json"));
+            }
+
+            this.FormClosing += delegate(object o, FormClosingEventArgs e)
+            {
+                string json = JsonConvert.SerializeObject(sets);
+                File.WriteAllText("data.json", json);
+            };
 		}
 
 		private void StuddyBuddyForm_Load(object sender, EventArgs e)
 		{
-			for (int i = 0; i < 10; i++)
-			{
-				QuestionSet qs = new QuestionSet("Set Name #" + (i + 1), "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at ipsum porttitor, hendrerit diam vitae, rutrum erat. Etiam ac ligula auctor, fringilla metus ut, accumsan ex. Suspendisse ultrices erat id orci pulvinar, vel dapibus lorem dignissim. Aenean ultricies, massa imperdiet accumsan finibus, velit lacus mattis ligula, in elementum elit metus ac ex.");
-				for(int b = 0; b < 5; b++) qs.questions.Add(new Question(b, "what is the meaning of life?", "42"));
-				sets.Add(qs);
-			}
 			populateForm();
 
 			currentQuestion = new Question(1, "What is the meaning of life?", "42");

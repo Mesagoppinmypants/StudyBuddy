@@ -76,6 +76,7 @@ namespace StudyBuddy
 				download.Location = new Point(704, 32);
 				download.Size = new Size(15, 14);
 				download.Image = global::StudyBuddy.Properties.Resources.arrow_down;
+                download.Cursor = System.Windows.Forms.Cursors.Hand;
 
 				// Add delegates
 				EventHandler dc = delegate(System.Object o, System.EventArgs e)
@@ -96,5 +97,10 @@ namespace StudyBuddy
 				panel1.Controls.Add(panel);
 			}
 		}
+
+        private void Community_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
