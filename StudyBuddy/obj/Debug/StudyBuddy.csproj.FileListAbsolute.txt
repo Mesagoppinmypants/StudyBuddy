@@ -1,0 +1,40 @@
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\bin\Debug\StudyBuddy.exe.config
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\bin\Debug\StudyBuddy.exe
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\bin\Debug\StudyBuddy.pdb
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.csprojResolveAssemblyReference.cache
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Properties.Resources.resources
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.csproj.GenerateResource.Cache
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.exe
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.pdb
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.StuddyBuddyForm.resources
+c:\users\fyre\documents\visual studio 2013\Projects\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Pull.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\bin\Debug\StudyBuddy.exe.config
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.exe
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.Pull.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.StuddyBuddyForm.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\bin\Debug\StudyBuddy.exe
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\bin\Debug\StudyBuddy.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.SetEditor.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Editors.QuestionEditors.MultipleChoice.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Editors.QuestionEditors.FillIn.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Questions.FillInQuestionForm.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\Study Buddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Questions.MultipleChoiceQuestionForm.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\bin\Debug\StudyBuddy.exe.config
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.exe
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.pdb
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\bin\Debug\StudyBuddy.exe
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\bin\Debug\StudyBuddy.pdb
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Pull.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Editors.QuestionEditors.FillIn.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Editors.QuestionEditors.MultipleChoice.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.SetEditor.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.StuddyBuddyForm.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Questions.FillInQuestionForm.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Forms.Questions.MultipleChoiceQuestionForm.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\StudyBuddy\StudyBuddy\StudyBuddy\obj\Debug\StudyBuddy.csproj.GenerateResource.Cache
